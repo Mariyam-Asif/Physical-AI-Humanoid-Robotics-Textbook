@@ -1,55 +1,110 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- Sync Impact Report:
+Version change: 1.0.0 → 1.1.0
+Modified principles: None
+Added sections: Cross-Template Alignment, Explicit Governance Procedures
+Removed sections: None
+Templates requiring updates:
+  - .specify/templates/plan-template.md: ⚠ pending
+  - .specify/templates/spec-template.md: ⚠ pending
+  - .specify/templates/tasks-template.md: ⚠ pending
+  - .specify/templates/commands/*.md: ⚠ pending
+  - README.md: ⚠ pending
+Follow-up TODOs: TODO(RATIFICATION_DATE): Original adoption date unknown
+-->
+# AI/Spec-Driven Book Creation - Physical AI & Humanoid Robotics Course Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Accuracy
+Every technical explanation must be correct and verifiable.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Clarity
+Content must be understandable for students and beginner-friendly readers.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Consistency
+The entire book must follow one unified structure, tone, and development workflow.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Quality Enforcement
+All sections must satisfy the constitution before approval.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+## Standards
 
-### [PRINCIPLE_6_NAME]
+### Writing & Content Standards
+- Use simple, structured, and beginner-friendly explanations.
+- Maintain consistent formatting across all chapters (headings, code blocks, lists).
+- All technical content must be reproducible and correct.
+- No plagiarism (all content must be original).
+- Provide small examples where necessary, using short, clean code blocks.
 
+### Coding Standards (Spec-Kit Plus & Claude Code)
+- Every code block should include context on what it solves.
+- Prefer clarity over complexity.
 
-[PRINCIPLE__DESCRIPTION]
+### Technology Stack Standards
+- Frontend/Platform: Docusaurus
+- Deployment: GitHub Pages
+- Authoring Tools: Spec-Kit Plus + Claude Code
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### Repository Standards
+- Clean directory structure
+- No unused files
+- Use version control properly (commits should be meaningful)
+- Branch naming conventions: `feature/<feature-name>`, `bugfix/<bug-description>`, `release/<version>`
+- PR merge strategies: Squash and merge for feature branches, fast-forward for release branches
+- Links to detailed repository guidelines: [Link to internal repo guidelines] <!-- Placeholder, can be updated later -->
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Architecture & Structure Standards
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+- Use a modular chapter structure (each topic in its own folder).
+- Use reusable patterns for explanations (intro → breakdown → example → summary).
+- Avoid anti-patterns such as:
+  - Overly long pages
+  - Repeated content
+  - Unverified claims
+  - Unstructured or mixed writing style
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Security Rules
+- No sensitive, harmful, or non-public information.
+- Do not include dangerous code, unsafe instructions, or anything harmful.
+- Follow safe-content guidelines throughout the book.
+
+### Error Handling & Edge Case Rules
+- Explain common mistakes beginners might make.
+- Include brief notes on troubleshooting where necessary.
+- Do not include advanced or unnecessary edge cases unless relevant.
+- Code examples must show safe handling whenever applicable (e.g., simple validation, fallback values).
+
+### Testing Standards
+- Basic test: The page must render correctly in Docusaurus without errors.
+- Editorial test: Content must be readable and logically structured.
+- Code test: Verify that every code example runs or makes sense.
+- Consistency test: Must follow the same standards as all other chapters.
+
+## Cross-Template Alignment
+All dependent documentation and templates (plan-template.md, spec-template.md, tasks-template.md, commands/*.md, README.md) MUST be aligned with this constitution to ensure consistency across the project.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+- **Mandatory Rules Across ALL Features:**
+  1. Consistency in format, tone, and structure
+  2. Accuracy and clarity in all explanations
+  3. Unified coding style and clean examples
+  4. All sections must be testable and verifiable
+  5. No harmful, sensitive, or incorrect content
+  6. Pages must build successfully before submission
+- **Success Criteria:**
+  - All chapters follow this constitution.
+  - Full book builds cleanly in Docusaurus.
+  - Deployed successfully on GitHub Pages.
+  - Clear, organized, high-quality writing throughout.
+  - All coding examples are correct, simple, and helpful.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+### Explicit Governance Procedures
+- **Amendment Procedure**: Changes are proposed via pull requests, reviewed by core maintainers, and approved by a supermajority vote.
+- **Versioning Policy**: This constitution follows semantic versioning (MAJOR.MINOR.PATCH).
+  - MAJOR version increments for backward incompatible changes (e.g., removal of a core principle).
+  - MINOR version increments for new principles, sections, or significantly expanded guidance.
+  - PATCH version increments for clarifications, wording fixes, or non-semantic refinements.
+- **Compliance Review**: Adherence is assessed through regular audits, peer reviews during development, and automated checks where possible. Non-compliance requires immediate remediation and review.
+
+**Version**: 1.1.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-03
