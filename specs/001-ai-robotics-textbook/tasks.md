@@ -36,9 +36,9 @@ description: "Task list for AI Robotics Textbook Platform implementation"
 - [x] T008 Create `chapter-metadata-schema.json` schema file: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\schemas/chapter-metadata-schema.json`
 - [x] T009 Create `templates/` directory: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\templates`
 - [x] T010 Create `chapter-template.md` file: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\templates/chapter-template.md`
-- [ ] T011 Configure `sidebars.ts` for initial "Introduction" and "Modules" categories: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\sidebars.ts`
-- [ ] T012 Add basic `README.md` file: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\README.md`
-- [ ] T013 Add basic `.gitignore` file: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\.gitignore`
+- [x] T011 Configure `sidebars.ts` for initial "Introduction" and "Modules" categories: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\sidebars.ts`
+- [x] T012 Add basic `README.md` file: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\README.md`
+- [x] T013 Add basic `.gitignore` file: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\.gitignore`
 
 ---
 
@@ -48,17 +48,17 @@ description: "Task list for AI Robotics Textbook Platform implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T014 Integrate JSON Schema validation library (e.g., AJV) into the project
-- [ ] T015 Configure Docusaurus build for chapter frontmatter validation using `schemas/chapter-metadata-schema.json`
-- [ ] T016 [P] [US-FOUND] Write failing tests for `Callout` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/__tests__/Callout.test.tsx` (example path)
-- [ ] T017 [P] Develop a custom MDX `Callout` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/Callout.tsx`
-- [ ] T018 [P] [US-FOUND] Write failing tests for `KeyTakeaways` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/__tests__/KeyTakeaways.test.tsx` (example path)
-- [ ] T019 [P] Develop a custom MDX `KeyTakeaways` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/KeyTakeaways.tsx`
-- [ ] T020 [P] [US-FOUND] Write failing tests for `ExerciseBlock` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/__tests__/ExerciseBlock.test.tsx` (example path)
-- [ ] T021 [P] Develop a custom MDX `ExerciseBlock` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/ExerciseBlock.tsx`
-- [ ] T022 Ensure custom MDX components are SSR-compatible
-- [ ] T023 Configure Docusaurus to correctly parse and render custom MDX components
-- [ ] T024 [P] Swizzle Docusaurus Navbar component for custom styling/behavior: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/theme/Navbar/Content/index.tsx` (example)
+- [x] T014 Integrate JSON Schema validation library (e.g., AJV) into the project
+- [x] T015 Configure Docusaurus build for chapter frontmatter validation using `schemas/chapter-metadata-schema.json`
+- [x] T016 [P] [US-FOUND] Write failing tests for `Callout` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/__tests__/Callout.test.tsx` (example path)
+- [x] T017 [P] Develop a custom MDX `Callout` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/Callout.tsx`
+- [x] T018 [P] [US-FOUND] Write failing tests for `KeyTakeaways` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/__tests__/KeyTakeaways.test.tsx` (example path)
+- [x] T019 [P] Develop a custom MDX `KeyTakeaways` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/KeyTakeaways.tsx`
+- [x] T020 [P] [US-FOUND] Write failing tests for `ExerciseBlock` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/__tests__/ExerciseBlock.test.tsx` (example path)
+- [x] T021 [P] Develop a custom MDX `ExerciseBlock` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/ExerciseBlock.tsx`
+- [x] T022 Ensure custom MDX components are SSR-compatible
+- [x] T023 Configure Docusaurus to correctly parse and render custom MDX components
+- [x] T024 [P] Swizzle Docusaurus Navbar component for custom styling/behavior: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/theme/Navbar/Content/index.tsx` (example)
 
 ---
 
@@ -70,13 +70,13 @@ description: "Task list for AI Robotics Textbook Platform implementation"
 
 ### Implementation for User Story 1
 
-- [ ] T025 Create `_category_.json` files for all 4 modules: `docs/module-1-the-robotic-nervous-system-ros-2-weeks-3-5/_category_.json`, `docs/module-2-the-digital-twin-gazebo-unity-weeks-6-7/_category_.json`, `docs/module-3-the-ai-robot-brain-nvidia-isaac-weeks-8-10/_category_.json`, `docs/module-4-vision-language-action-weeks-11-13/_category_.json`
-- [ ] T026 Update `sidebars.ts` to include the 4 modules with their week ranges: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\sidebars.ts`
-- [ ] T027 Create an introductory `docs/introduction.mdx` page: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/introduction.mdx`
-- [ ] T028 Create `docs/glossary.mdx` page: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/glossary.mdx`
-- [ ] T029 Create `docs/references.mdx` page: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/references.mdx`
-- [ ] T030 Generate placeholder chapter files (e.g., `chapter-1.mdx`) for each module using `templates/chapter-template.md`
-- [ ] T031 [P] Swizzle Docusaurus Sidebar component for custom rendering/week display: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/theme/DocSidebar/Desktop/index.tsx` (example)
+- [x] T025 Create `_category_.json` files for all 4 modules: `docs/module-1-the-robotic-nervous-system-ros-2-weeks-3-5/_category_.json`, `docs/module-2-the-digital-twin-gazebo-unity-weeks-6-7/_category_.json`, `docs/module-3-the-ai-robot-brain-nvidia-isaac-weeks-8-10/_category_.json`, `docs/module-4-vision-language-action-weeks-11-13/_category_.json`
+- [x] T026 Update `sidebars.ts` to include the 4 modules with their week ranges: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\sidebars.ts`
+- [x] T027 Create an introductory `docs/introduction.mdx` page: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/introduction.mdx`
+- [x] T028 Create `docs/glossary.mdx` page: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/glossary.mdx`
+- [x] T029 Create `docs/references.mdx` page: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/references.mdx`
+- [x] T030 Generate placeholder chapter files (e.g., `chapter-1.mdx`) for each module using `templates/chapter-template.md`
+- [x] T031 [P] Swizzle Docusaurus Sidebar component for custom rendering/week display: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/theme/DocSidebar/Desktop/index.tsx` (example)
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -90,10 +90,11 @@ description: "Task list for AI Robotics Textbook Platform implementation"
 
 ### Implementation for User Story 2
 
-- [ ] T032 Customize `docusaurus.config.ts` to enable Docusaurus search functionality: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
-- [ ] T033 Implement custom styling for `Callout` and `KeyTakeaways` components in `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/css/custom.css` (or similar)
-- [ ] T034 Configure Docusaurus for syntax highlighting for code blocks (using `docusaurus.config.ts` and prism-react-renderer themes): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
-- [ ] T035 Implement copy-to-clipboard functionality for code blocks (may involve swizzling `CodeBlock` component): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/theme/CodeBlock/index.tsx` (example)
+- [x] T032 Customize `docusaurus.config.ts` to enable Docusaurus search functionality: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
+- [x] T033 Implement custom styling for `Callout` and `KeyTakeaways` components in `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/css/custom.css` (or similar)
+- [x] T034 Configure Docusaurus for syntax highlighting for code blocks (using `docusaurus.config.ts` and prism-react-renderer themes): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
+- [x] T034 Configure Docusaurus for syntax highlighting for code blocks (using `docusaurus.config.ts` and prism-react-renderer themes): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
+- [x] T035 Implement copy-to-clipboard functionality for code blocks (may involve swizzling `CodeBlock` component): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/theme/CodeBlock/index.tsx` (example)
 - [ ] T036 Enable line numbers and line highlighting for code blocks (using `docusaurus.config.ts` and MDX `metastring`): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
 - [ ] T037 Verify `prev/next` chapter navigation functions correctly and displays chapter titles
 - [ ] T038 Ensure all chapter files adhere to the specified chapter layout and content style guide

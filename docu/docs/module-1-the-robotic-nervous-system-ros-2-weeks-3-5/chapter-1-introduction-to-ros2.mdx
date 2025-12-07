@@ -1,0 +1,128 @@
+---
+id: m1c1
+title: Introduction to ROS 2
+description: An introduction to the Robot Operating System 2.
+tags: ['ROS 2', 'robotics', 'middleware']
+sidebar_label: Introduction to ROS 2
+estimated_time: 1 hour
+week: 3
+module: Module 1
+prerequisites: []
+learning_objectives:
+  - Understand the core concepts of ROS 2.
+  - Identify the main components of a ROS 2 system.
+  - Set up a basic ROS 2 development environment.
+assessment_type: Quiz
+difficulty_level: Beginner
+capstone_component: false
+slug: /m1-the-robotic-nervous-system-ros-2-weeks-3-5/introduction-to-ros2
+---
+
+import { Tabs, TabItem } from '@docusaurus/theme-common';
+import { Callout, Exercise, KeyTakeaways } from '@site/src/components/mdx-components';
+
+# Introduction to ROS 2
+
+<Callout type="learning-objectives">
+**Learning Objectives:**
+*   Understand the core concepts of ROS 2.
+*   Identify the main components of a ROS 2 system.
+*   Set up a basic ROS 2 development environment.
+</Callout>
+
+**Prerequisites:** None for this introductory chapter.
+
+## Introduction
+
+Welcome to the first chapter of Module 1, where we delve into the world of the Robot Operating System 2 (ROS 2). ROS 2 is a flexible framework for writing robot software, providing a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robotic platforms. This chapter will introduce you to the fundamental concepts of ROS 2, its architecture, and how to get your development environment set up.
+
+## Core Content: Understanding ROS 2
+
+ROS 2 builds upon the success of its predecessor, ROS 1, but with significant improvements designed for production robotics. It addresses challenges related to real-time performance, security, and multi-robot systems.
+
+### Key Concepts
+
+*   **Nodes**: Executable processes that perform computation.
+*   **Topics**: Named buses over which nodes exchange messages.
+*   **Messages**: Data structures used by topics.
+*   **Services**: Request/reply communication between nodes.
+*   **Actions**: Long-running tasks with feedback and cancellability.
+
+### Code Block Standards
+
+Use fenced code blocks with language identifiers, line numbers, copy buttons, and optional highlighting.
+
+<Tabs groupId="code-examples">
+  <TabItem value="bash" label="Bash" default>
+```bash showLineNumbers title="install_ros2.sh"
+sudo apt update
+sudo apt install ros-foxy-desktop
+source /opt/ros/foxy/setup.bash
+```
+  </TabItem>
+  <TabItem value="python" label="Python">
+```python showLineNumbers title="simple_publisher.py"
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import String
+
+class MinimalPublisher(Node):
+    def __init__(self):
+        super().__init__('minimal_publisher')
+        self.publisher_ = self.create_publisher(String, 'topic', 10)
+        timer_period = 0.5  # seconds
+        self.timer = self.create_timer(timer_period, self.timer_callback)
+        self.i = 0
+
+    def timer_callback(self):
+        msg = String()
+        msg.data = f'Hello World: {self.i}'
+        self.publisher_.publish(msg)
+        self.get_logger().info(f'Publishing: "{msg.data}"')
+        self.i += 1
+
+def main(args=None):
+    rclpy.init(args=args)
+    minimal_publisher = MinimalPublisher()
+    rclpy.spin(minimal_publisher)
+    minimal_publisher.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+```
+  </TabItem>
+</Tabs>
+
+<Callout type="tip" title="Pro Tip">
+Always ensure your ROS 2 environment is sourced correctly before running any ROS 2 commands. You can add `source /opt/ros/foxy/setup.bash` to your `~/.bashrc` file for convenience.
+</Callout>
+
+## Hands-On Exercise (Optional)
+
+<Exercise id="ros2-install" title="Install ROS 2 Foxy" solution="Follow the official ROS 2 Foxy installation guide for your operating system (Ubuntu recommended). Verify the installation by running `ros2 run demo_nodes_cpp talker` and `ros2 run demo_nodes_py listener`." difficulty="easy" estimated_time="30 min">
+  <p>**Problem Statement:** Install ROS 2 Foxy distribution on your development machine and verify its basic functionality.</p>
+  <p>**Starter Code:** (No starter code, as this is an installation exercise)</p>
+```bash
+# Start here: official ROS 2 Foxy installation guide
+```
+  <details>
+    <summary>Hint 1</summary>
+    <p>The official documentation is the best place to start. Look for the \"Foxy Fitzroy\" distribution.</p>
+  </details>
+</Exercise>
+
+<KeyTakeaways>
+**Key Takeaways:**
+*   ROS 2 is a robust framework for robotic software development.
+*   Its architecture relies on concepts like nodes, topics, messages, services, and actions.
+*   Proper environment setup is crucial for ROS 2 development.
+</KeyTakeaways>
+
+## Summary
+
+This chapter provided an initial overview of ROS 2, covering its core concepts, architecture, and basic installation. You should now have a foundational understanding of what ROS 2 is and how to begin setting up your development environment. In the next chapters, we will dive deeper into specific ROS 2 components and programming patterns.
+
+## References
+
+*   **The ROS 2 Documentation**. (Current year). *Foxy Fitzroy (LTS)*. Retrieved from [https://docs.ros.org/en/foxy/](https://docs.ros.org/en/foxy/)
