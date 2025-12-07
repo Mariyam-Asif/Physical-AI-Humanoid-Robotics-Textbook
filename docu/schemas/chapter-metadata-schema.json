@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chapter Frontmatter Schema",
+  "description": "Schema for validating Docusaurus chapter frontmatter.",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The main title of the chapter."
+    },
+    "sidebar_label": {
+      "type": "string",
+      "description": "The label displayed in the Docusaurus sidebar."
+    },
+    "tags": {
+      "type": "array",
+      "description": "Keywords for categorization and search.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "estimated_time": {
+      "type": "string",
+      "description": "Estimated time to complete the chapter (e.g., '2 hours')."
+    },
+    "week": {
+      "type": "integer",
+      "description": "The week number this chapter belongs to."
+    },
+    "module": {
+      "type": "string",
+      "description": "The module title this chapter belongs to."
+    },
+    "prerequisites": {
+      "type": "array",
+      "description": "List of slugs/titles of prerequisite chapters.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "learning_objectives": {
+      "type": "array",
+      "description": "Specific learning goals for the chapter (Bloom's taxonomy verbs recommended).",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "assessment_type": {
+      "type": "string",
+      "description": "Type of assessment for the chapter (e.g., 'Quiz', 'Lab')."
+    },
+    "difficulty_level": {
+      "type": "string",
+      "description": "Difficulty (e.g., 'Beginner', 'Intermediate', 'Advanced')."
+    },
+    "capstone_component": {
+      "type": "boolean",
+      "description": "Indicates if the chapter includes a capstone project component."
+    }
+  },
+  "required": [
+    "title",
+    "sidebar_label",
+    "tags",
+    "learning_objectives"
+  ]
+}

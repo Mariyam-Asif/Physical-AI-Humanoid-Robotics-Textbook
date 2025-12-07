@@ -1,12 +1,13 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import path from 'path';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'AI Robotics Textbook',
+  tagline: 'A comprehensive guide to Physical AI and Humanoid Robotics',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,15 +16,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'http://localhost',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'mariyam-asif', // Usually your GitHub org/user name.
+  projectName: 'ai-spec-driven-hackathon', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -35,6 +36,8 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: [path.resolve(__dirname, './plugins/docusaurus-plugin-frontmatter-validation')],
+
   presets: [
     [
       'classic',
@@ -44,7 +47,12 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/mariyam-asif/ai-spec-driven-hackathon/tree/main/packages/create-docusaurus/templates/shared/',
+          remarkPlugins: [require('remark-docusaurus-tabs')],
+          rehypePlugins: [],
+          beforeDefaultRemarkPlugins: [],
+          beforeDefaultRehypePlugins: [],
+          recmaPlugins: [],
         },
         blog: {
           showReadingTime: true,
@@ -55,7 +63,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/mariyam-asif/ai-spec-driven-hackathon/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -75,7 +83,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'AI Robotics Textbook',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -85,7 +93,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Modules',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -138,7 +146,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} AI Robotics Textbook, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

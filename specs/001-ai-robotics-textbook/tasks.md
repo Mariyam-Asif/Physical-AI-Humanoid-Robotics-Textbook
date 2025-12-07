@@ -26,17 +26,17 @@ description: "Task list for AI Robotics Textbook Platform implementation"
 
 **Purpose**: Project initialization and basic Docusaurus structure
 
-- [ ] T001 Initialize Docusaurus project in current directory (requires `npm init docusaurus`)
-- [ ] T002 Install Docusaurus dependencies (e.g., `npm install`)
-- [ ] T003 Configure `docusaurus.config.js` for basic site metadata (title, tagline): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.js`
-- [ ] T004 Configure `docusaurus.config.js` for basic theme settings (navbar, footer): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.js`
-- [ ] T005 Create `src/components/` directory: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components`
-- [ ] T006 Create `src/theme/` directory: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/theme`
-- [ ] T007 Create `schemas/` directory: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\schemas`
-- [ ] T008 Create `chapter-metadata-schema.json` schema file: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\schemas/chapter-metadata-schema.json`
-- [ ] T009 Create `templates/` directory: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\templates`
-- [ ] T010 Create `chapter-template.md` file: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\templates/chapter-template.md`
-- [ ] T011 Configure `sidebars.js` for initial "Introduction" and "Modules" categories: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\sidebars.js`
+- [x] T001 Initialize Docusaurus project in current directory (requires `npm init docusaurus`)
+- [x] T002 Install Docusaurus dependencies (e.g., `npm install`)
+- [x] T003 Configure `docusaurus.config.ts` for basic site metadata (title, tagline): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
+- [x] T004 Configure `docusaurus.config.ts` for basic theme settings (navbar, footer): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
+- [x] T005 Create `src/components/` directory: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components`
+- [x] T006 Create `src/theme/` directory: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/theme`
+- [x] T007 Create `schemas/` directory: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\schemas`
+- [x] T008 Create `chapter-metadata-schema.json` schema file: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\schemas/chapter-metadata-schema.json`
+- [x] T009 Create `templates/` directory: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\templates`
+- [x] T010 Create `chapter-template.md` file: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\templates/chapter-template.md`
+- [ ] T011 Configure `sidebars.ts` for initial "Introduction" and "Modules" categories: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\sidebars.ts`
 - [ ] T012 Add basic `README.md` file: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\README.md`
 - [ ] T013 Add basic `.gitignore` file: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\.gitignore`
 
@@ -71,7 +71,7 @@ description: "Task list for AI Robotics Textbook Platform implementation"
 ### Implementation for User Story 1
 
 - [ ] T025 Create `_category_.json` files for all 4 modules: `docs/module-1-the-robotic-nervous-system-ros-2-weeks-3-5/_category_.json`, `docs/module-2-the-digital-twin-gazebo-unity-weeks-6-7/_category_.json`, `docs/module-3-the-ai-robot-brain-nvidia-isaac-weeks-8-10/_category_.json`, `docs/module-4-vision-language-action-weeks-11-13/_category_.json`
-- [ ] T026 Update `sidebars.js` to include the 4 modules with their week ranges: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\sidebars.js`
+- [ ] T026 Update `sidebars.ts` to include the 4 modules with their week ranges: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\sidebars.ts`
 - [ ] T027 Create an introductory `docs/introduction.mdx` page: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/introduction.mdx`
 - [ ] T028 Create `docs/glossary.mdx` page: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/glossary.mdx`
 - [ ] T029 Create `docs/references.mdx` page: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/references.mdx`
@@ -90,11 +90,11 @@ description: "Task list for AI Robotics Textbook Platform implementation"
 
 ### Implementation for User Story 2
 
-- [ ] T032 Customize `docusaurus.config.js` to enable Docusaurus search functionality: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.js`
+- [ ] T032 Customize `docusaurus.config.ts` to enable Docusaurus search functionality: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
 - [ ] T033 Implement custom styling for `Callout` and `KeyTakeaways` components in `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/css/custom.css` (or similar)
-- [ ] T034 Configure Docusaurus for syntax highlighting for code blocks (using `docusaurus.config.js` and prism-react-renderer themes): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.js`
+- [ ] T034 Configure Docusaurus for syntax highlighting for code blocks (using `docusaurus.config.ts` and prism-react-renderer themes): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
 - [ ] T035 Implement copy-to-clipboard functionality for code blocks (may involve swizzling `CodeBlock` component): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/theme/CodeBlock/index.tsx` (example)
-- [ ] T036 Enable line numbers and line highlighting for code blocks (using `docusaurus.config.js` and MDX `metastring`): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.js`
+- [ ] T036 Enable line numbers and line highlighting for code blocks (using `docusaurus.config.ts` and MDX `metastring`): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
 - [ ] T037 Verify `prev/next` chapter navigation functions correctly and displays chapter titles
 - [ ] T038 Ensure all chapter files adhere to the specified chapter layout and content style guide
 
@@ -111,9 +111,9 @@ description: "Task list for AI Robotics Textbook Platform implementation"
 ### Implementation for User Story 3
 
 - [ ] T039 Create `ModuleCard` React component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/ModuleCard.tsx`
-- [ ] T040 Integrate `ModuleCard` components into the Docusaurus homepage: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/pages/index.js`
-- [ ] T041 Implement a quick links sidebar on the homepage (e.g., in `src/pages/index.js` or a custom component) for hardware setup, assessments, and glossary
-- [ ] T042 Add a "Recent Updates" section to the homepage: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/pages/index.js`
+- [ ] T040 Integrate `ModuleCard` components into the Docusaurus homepage: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/pages/index.tsx`
+- [ ] T041 Implement a quick links sidebar on the homepage (e.g., in `src/pages/index.tsx` or a custom component) for hardware setup, assessments, and glossary
+- [ ] T042 Add a "Recent Updates" section to the homepage: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/pages/index.tsx`
 - [ ] T043 Create placeholder `docs/hardware-setup.mdx` chapter: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/hardware-setup.mdx`
 - [ ] T044 Create placeholder `docs/environment-config.mdx` chapter: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/environment-config.mdx`
 
