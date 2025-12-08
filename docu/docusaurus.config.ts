@@ -16,7 +16,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://Mariyam-Asif.github.io',
+  url: 'https://mariyam-asif.github.io',
   baseUrl: '/Physical-AI-Humanoid-Robotics-Textbook/',
 
 
@@ -60,7 +60,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/mariyam-asif/ai-spec-driven-hackathon/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/mariyam-asif/physical-ai-humanoid-robotics-textbook/tree/main/packages/create-docusaurus/templates/shared/',
           remarkPlugins: [require('remark-docusaurus-tabs')],
           rehypePlugins: [],
           beforeDefaultRemarkPlugins: [],
@@ -76,7 +76,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/mariyam-asif/ai-spec-driven-hackathon/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/mariyam-asif/physical-ai-humanoid-robotics-textbook/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -99,7 +99,7 @@ const config: Config = {
       title: 'AI Robotics Textbook',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {
