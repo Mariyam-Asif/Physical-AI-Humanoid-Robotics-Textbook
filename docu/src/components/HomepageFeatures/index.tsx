@@ -6,8 +6,7 @@ import styles from "./styles.module.css";
 type ModuleCard = {
   weeks: string;
   title: string;
-  focus: string;
-  description: ReactNode;
+  focus: string;  description: ReactNode;
   outcomes: string[];
 };
 

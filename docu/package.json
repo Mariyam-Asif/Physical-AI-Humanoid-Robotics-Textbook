@@ -16,10 +16,11 @@
   },
   "dependencies": {
     "@docusaurus/core": "3.9.2",
-    "@docusaurus/preset-classic": "3.9.2",
+    "@docusaurus/preset-classic": "^3.9.2",
     "@mdx-js/react": "^3.0.0",
     "@tabler/icons-react": "^3.35.0",
     "ajv": "^8.17.1",
+    "cheerio": "^1.1.0",
     "clsx": "^2.0.0",
     "docusaurus-plugin-search-local": "^2.1.2",
     "gray-matter": "^4.0.3",
@@ -33,6 +34,7 @@
     "@docusaurus/tsconfig": "3.9.2",
     "@docusaurus/types": "3.9.2",
     "@types/react-copy-to-clipboard": "^5.0.7",
+    "gh-pages": "^6.3.0",
     "typescript": "~5.6.2"
   },
   "browserslist": {
@@ -47,6 +49,9 @@
       "last 5 safari version"
     ]
   },
+  "scripts": {
+  "deploy": "docusaurus deploy"
+},
   "engines": {
     "node": ">=20.0"
   }

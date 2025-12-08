@@ -1,11 +1,11 @@
 {
   "dependencies": {
+    "@tabler/icons-react": "^3.35.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "docusaurus-plugin-search-local": "^2.1.2"
   },
   "engines": {
-  "node": "18.x"
+    "node": "18.x"
   }
 }
-
