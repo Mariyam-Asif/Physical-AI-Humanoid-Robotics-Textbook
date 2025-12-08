@@ -17,13 +17,13 @@ const config: Config = {
 
   // Set the production url of your site here
   url: 'https://mariyam-asif.github.io',
-  baseUrl: '/Physical-AI-Humanoid-Robotics-Textbook/',
+  baseUrl: '/',
 
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'mariyam-asif', // Usually your GitHub org/user name.
-  projectName: 'ai-spec-driven-hackathon', // Usually your repo name.
+  projectName: 'physical-ai-humanoid-robotics-hextbook', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 

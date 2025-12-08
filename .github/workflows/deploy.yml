@@ -14,10 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # Go into your docu folder
-      - name: Change to docu folder
-        run: cd docu
-
       # Setup Node
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -26,22 +22,18 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: |
-          cd docu
-          npm ci
+        run: npm ci
 
       # Build Docusaurus
       - name: Build website
-        run: |
-          cd docu
-          npm run build
+        run: npm run build
 
       # Upload build output
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docu/build
-
+          path: build   # changed from docu/build
+          
   deploy:
     needs: build
     runs-on: ubuntu-latest
