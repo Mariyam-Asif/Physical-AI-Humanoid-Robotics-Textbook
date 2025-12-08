@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Details from '@theme/Details';
 
-interface ExerciseBlockProps {
+interface ExerciseProps {
   id: string;
   title: string;
   solution: string;
@@ -12,7 +12,7 @@ interface ExerciseBlockProps {
   children: React.ReactNode;
 }
 
-const ExerciseBlock: React.FC<ExerciseBlockProps> = ({ id, title, solution, initialCode, hints, difficulty, children }) => {
+const Exercise: React.FC<ExerciseProps> = ({ id, title, solution, initialCode, hints, difficulty, children }) => {
   const [showSolution, setShowSolution] = React.useState(false);
 
   return (
@@ -50,4 +50,4 @@ const ExerciseBlock: React.FC<ExerciseBlockProps> = ({ id, title, solution, init
   );
 };
 
-export default ExerciseBlock;
+export default Exercise;

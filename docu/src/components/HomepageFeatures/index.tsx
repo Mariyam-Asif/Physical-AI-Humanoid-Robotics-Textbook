@@ -1,56 +1,103 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import type { ReactNode } from "react";
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
 
-type FeatureItem = {
+type ModuleCard = {
+  weeks: string;
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  focus: string;
   description: ReactNode;
+  outcomes: string[];
 };
 
-const FeatureList: FeatureItem[] = [
+const Modules: ModuleCard[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    weeks: "Weeks 3–5",
+    title: "Module 1: The Robotic Nervous System (ROS 2)",
+    focus: "Middleware for robot control.",
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        ROS 2 Nodes, Topics, Services, and Actions.  
+        Bridging Python agents with <code>rclpy</code>.  
+        URDF for robot modeling and visualization.
       </>
     ),
+    outcomes: [
+      "Explain the ROS 2 computation graph",
+      "Create publishers, subscribers, and services",
+      "Define robot structure using URDF and visualize in RViz2",
+    ],
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    weeks: "Weeks 6–7",
+    title: "Module 2: The Digital Twin (Gazebo & Unity)",
+    focus: "Create simulation environments for robotics.",
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Build digital twins using Gazebo and Unity.  
+        Simulate sensors, physics, and test algorithms before deployment.
       </>
     ),
+    outcomes: [
+      "Create Gazebo environments with physics + sensors",
+      "Integrate Unity for photorealistic simulation",
+      "Test navigation and perception algorithms in simulation",
+    ],
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    weeks: "Weeks 8–10",
+    title: "Module 3: The AI-Robot Brain (NVIDIA Isaac™)",
+    focus: "GPU-accelerated robotics, VSLAM, Nav2, autonomous behavior.",
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Use Isaac Sim for synthetic data, VSLAM, and navigation.  
+        Implement Nav2 for humanoid movement planning.
       </>
     ),
+    outcomes: [
+      "Configure NVIDIA Isaac Sim",
+      "Implement Visual SLAM",
+      "Deploy Nav2 for autonomous navigation",
+    ],
+  },
+  {
+    weeks: "Weeks 11–13",
+    title: "Module 4: Vision-Language-Action (VLA)",
+    focus: "LLMs + Robotics for natural human-robot interaction.",
+    description: (
+      <>
+        Voice-to-Action with Whisper.  
+        Cognitive LLM planning.  
+        Capstone: Autonomous humanoid performing tasks.
+      </>
+    ),
+    outcomes: [
+      "Calculate humanoid kinematics",
+      "Implement manipulation primitives",
+      "Integrate conversational AI with robot action planning",
+    ],
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function ModuleCardItem({ weeks, title, focus, description, outcomes }: ModuleCard) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={clsx("col col--6 margin-bottom--lg")}>
+      <div className="card shadow--md">
+        <div className="card__header">
+          <Heading as="h3">{weeks}</Heading>
+          <h4>{title}</h4>
+          <p style={{ fontStyle: "italic", marginTop: "0.3rem" }}>{focus}</p>
+        </div>
+        <div className="card__body">
+          <p>{description}</p>
+          <strong>Learning Outcomes:</strong>
+          <ul>
+            {outcomes.map((outcome, idx) => (
+              <li key={idx}>{outcome}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
@@ -58,11 +105,15 @@ function Feature({title, Svg, description}: FeatureItem) {
 
 export default function HomepageFeatures(): ReactNode {
   return (
-    <section className={styles.features}>
+    <section className={styles.features} style={{ paddingTop: "2rem" }}>
       <div className="container">
+        <Heading as="h2" className="text--center margin-bottom--lg">
+          Course Modules
+        </Heading>
+
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+          {Modules.map((props, idx) => (
+            <ModuleCardItem key={idx} {...props} />
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import ExerciseBlock from '../ExerciseBlock'; // We expect this component to exist soon
+import ExerciseBlock from '../Exercise'; // We expect this component to exist soon
 
 describe('ExerciseBlock', () => {
   it('should render without crashing and display title and children', () => {

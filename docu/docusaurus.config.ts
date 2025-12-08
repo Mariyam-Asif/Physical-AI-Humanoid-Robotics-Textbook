@@ -37,20 +37,20 @@ const config: Config = {
   },
 
     plugins: [
-    path.resolve(__dirname, './plugins/docusaurus-plugin-frontmatter-validation'),
-    [
-      require.resolve('docusaurus-plugin-search-local'),
-      {
-        hashed: true,
-        docsRouteBasePath: '/',
-        blogRouteBasePath: '/blog',
-        indexDocs: true,
-        indexBlog: true,
-        indexPages: false,
-        highlightSearchTermsOnTargetPage: true
-      },
-    ],
+  './plugins/docusaurus-plugin-frontmatter-validation',
+  [
+    'docusaurus-plugin-search-local',
+    {
+      hashed: true,
+      docsRouteBasePath: '/',
+      blogRouteBasePath: '/blog',
+      indexDocs: true,
+      indexBlog: true,
+      indexPages: false,
+      highlightSearchTermsOnTargetPage: true,
+    },
   ],
+],
 
   presets: [
     [
