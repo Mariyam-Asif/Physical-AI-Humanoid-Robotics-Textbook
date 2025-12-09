@@ -137,18 +137,24 @@ As a robotics hobbyist, I need quick access to hardware setup guides, environmen
 
 - **Introduction**
 - **Modules**
-  - Module 1: The Robotic Nervous System (ROS 2) (Weeks 3–5)
+  - Module 1: (ROS 2) (Weeks 3–5)
     - Chapter 1
     - Chapter 2
     - Chapter 3
     - Chapter 4
     - Chapter 5
-  - Module 2: The Digital Twin (Gazebo & Unity) (Weeks 6–7)
+  - Module 2: (Gazebo & Unity) (Weeks 6–7)
     - Chapter 1
     - Chapter 2
     - Chapter 3
-  - Module 3: The AI-Robot Brain (NVIDIA Isaac™) (Weeks 8–10) → Chapters 1–X
-  - Module 4: Vision-Language-Action (VLA) (Weeks 11–13) → Chapters 1–X
+  - Module 3: (NVIDIA Isaac™) (Weeks 8–10)
+    - Chapter 1
+    - Chapter 2
+    - Chapter 3
+  - Module 4: Vision-Language-Action (VLA) (Weeks 11–13)
+    - Chapter 1
+    - Chapter 2
+    - Chapter 3
 - **Appendices**
 - **Glossary**
 - **References**

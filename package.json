@@ -50,7 +50,11 @@
     ]
   },
   "scripts": {
-  "deploy": "docusaurus deploy"
+  "start": "docusaurus start",
+  "build": "docusaurus build",
+  "swizzle": "docusaurus swizzle",
+  "deploy": "docusaurus deploy",
+  "serve": "docusaurus serve"
 },
   "engines": {
     "node": ">=20.0"

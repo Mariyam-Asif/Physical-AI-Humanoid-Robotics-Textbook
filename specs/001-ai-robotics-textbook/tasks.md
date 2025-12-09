@@ -55,7 +55,7 @@ description: "Task list for AI Robotics Textbook Platform implementation"
 - [x] T018 [P] [US-FOUND] Write failing tests for `KeyTakeaways` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/__tests__/KeyTakeaways.test.tsx` (example path)
 - [x] T019 [P] Develop a custom MDX `KeyTakeaways` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/KeyTakeaways.tsx`
 - [x] T020 [P] [US-FOUND] Write failing tests for `ExerciseBlock` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/__tests__/ExerciseBlock.test.tsx` (example path)
-- [x] T021 [P] Develop a custom MDX `ExerciseBlock` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/ExerciseBlock.tsx`
+- [x] T021 [P] Develop a custom MDX `Exercise` component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/mdx/Exercise.tsx`
 - [x] T022 Ensure custom MDX components are SSR-compatible
 - [x] T023 Configure Docusaurus to correctly parse and render custom MDX components
 - [x] T024 [P] Swizzle Docusaurus Navbar component for custom styling/behavior: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/theme/Navbar/Content/index.tsx` (example)
@@ -95,8 +95,8 @@ description: "Task list for AI Robotics Textbook Platform implementation"
 - [x] T034 Configure Docusaurus for syntax highlighting for code blocks (using `docusaurus.config.ts` and prism-react-renderer themes): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
 - [x] T034 Configure Docusaurus for syntax highlighting for code blocks (using `docusaurus.config.ts` and prism-react-renderer themes): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
 - [x] T035 Implement copy-to-clipboard functionality for code blocks (may involve swizzling `CodeBlock` component): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/theme/CodeBlock/index.tsx` (example)
-- [ ] T036 Enable line numbers and line highlighting for code blocks (using `docusaurus.config.ts` and MDX `metastring`): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
-- [ ] T037 Verify `prev/next` chapter navigation functions correctly and displays chapter titles
+- [x] T036 Enable line numbers and line highlighting for code blocks (using `docusaurus.config.ts` and MDX `metastring`): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
+- [x] T037 Verify `prev/next` chapter navigation functions correctly and displays chapter titles
 - [ ] T038 Ensure all chapter files adhere to the specified chapter layout and content style guide
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently

@@ -48,14 +48,14 @@ The project follows a structured layout designed for clear organization and easy
 ```
 .
 ├── docs/                        # All chapter MDX files (Module/Chapter hierarchy)
-│   ├── module-1-the-robotic-nervous-system-ros-2-weeks-3-5/
+│   ├── module-1/
 │   │   ├── chapter-1.mdx
 │   │   └── _category_.json # Docusaurus sidebar configuration
-│   ├── module-2-the-digital-twin-gazebo-unity-weeks-6-7/
+│   ├── module-2/
 │   │   └── chapter-N.mdx
-|   |── module-3-the-ai-robot-brain-nvidia-isaac-weeks-8-10/
+|   |── module-3/
 │   │   └── chapter-N.mdx
-|   |── module-4-vision-language-action-weeks-11-13/
+|   |── module-4/
 │   │   └── chapter-N.mdx
 │   └── _category_.json          # Docusaurus sidebar configuration
 ├── templates/                   # Chapter template with frontmatter, exercises, callouts
@@ -82,7 +82,7 @@ Follow these guidelines when creating new content to maintain consistency and qu
 ### Chapter File Naming and Location
 
 *   **Path**: `docs/module-<number>-<slugified-module-title>-weeks-X-Y/chapter-<number>-<slug>.mdx`
-    *   Example: `docs/module-1-the-robotic-nervous-system-ros-2-weeks-3-5/chapter-1-introduction-to-robotics.mdx`
+    *   Example: `docs/module-1/chapter-1-introduction-to-robotics.mdx`
 *   **Content Type**: Use `.mdx` for chapters to enable rich content with custom React components.
 
 ### Chapter Template Usage

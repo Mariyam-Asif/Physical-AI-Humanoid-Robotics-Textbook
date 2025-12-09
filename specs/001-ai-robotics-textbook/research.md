@@ -28,7 +28,7 @@ This document summarizes initial research findings and best practices for develo
 - **Conditional sections**: Use frontmatter flags to conditionally render sections relevant to specific content types.
 
 ### 6. Metadata Validation - Sidebar Configuration
-- **Modules → Weeks → Chapters**: The Docusaurus sidebar configuration will be structured hierarchically.
+- **Modules (Weeks Range) → Chapters**: The Docusaurus sidebar configuration will be structured hierarchically.
 - **Collapsible categories**: Enable collapsible categories for modules and weeks to improve navigation for long curricula.
 
 ## Next Steps

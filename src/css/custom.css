@@ -128,3 +128,28 @@
 [data-theme='dark'] .key-takeaways__title {
   color: var(--ifm-color-primary-lightest);
 }
+
+/* Add line numbers to code blocks */
+.theme-code-block pre[class*="language-"] {
+  counter-reset: linenumber;
+}
+
+.theme-code-block pre[class*="language-"] code {
+  position: relative;
+}
+
+.theme-code-block pre[class*="language-"] code > span {
+  display: block;
+  padding-left: 3em;
+  text-indent: -3em;
+}
+
+.theme-code-block pre[class*="language-"] code > span::before {
+  counter-increment: linenumber;
+  content: counter(linenumber);
+  display: inline-block;
+  width: 2.5em;
+  margin-right: 0.5em;
+  text-align: right;
+  color: #888;
+}

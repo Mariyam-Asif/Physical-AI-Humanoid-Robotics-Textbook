@@ -164,6 +164,12 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['python', 'bash'],
+      showLineNumbers: true,
+      magicComments: [
+    // optional for line highlighting
+        { className: 'highlight-line', line: 'highlight-next-line' },
+      ],
     },
   } satisfies Preset.ThemeConfig,
 };
