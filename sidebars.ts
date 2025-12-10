@@ -16,6 +16,8 @@ const sidebars: SidebarsConfig = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   tutorialSidebar: [
     'introduction', // Link to introduction.mdx
+    'hardware-setup',
+    'environment-config',
     'glossary', // Link to glossary.mdx
     'references', // Link to references.mdx
     {
@@ -24,6 +26,8 @@ const sidebars: SidebarsConfig = {
       collapsible: true,
       items: [
         'module-1/m1c1',
+        'module-1/m1c2',
+        'module-1/m1c3',        
       ],
     },
     {

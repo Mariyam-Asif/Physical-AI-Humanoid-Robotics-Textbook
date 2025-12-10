@@ -1,0 +1,148 @@
+---
+title: Environment Configuration Guide
+description: A comprehensive guide to setting up your development environment for Physical AI and Humanoid Robotics.
+tags: [environment, setup, ROS2, Gazebo, Unity, NVIDIA Isaac, configuration]
+sidebar_label: Environment Configuration
+estimated_time: 30 minutes
+prerequisites: [hardware-setup]
+learning_objectives:
+  - Understand the necessary software components for robotics development.
+  - Learn how to install and configure ROS 2, Gazebo, Unity, and NVIDIA Isaac.
+  - Identify common configuration issues and troubleshooting steps.
+---
+
+import Admonition from '@theme/Admonition';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Environment Configuration Guide
+
+<Admonition type="info" title="Learning Objectives">
+  *   Understand the necessary software components for robotics development.
+  *   Learn how to install and configure ROS 2, Gazebo, Unity, and NVIDIA Isaac.
+  *   Identify common configuration issues and troubleshooting steps.
+</Admonition>
+
+**Prerequisites:** Ensure you have completed the [Hardware Setup Guide](/docs/hardware-setup) before proceeding with environment configuration.
+
+## Introduction
+
+Setting up a robust development environment is crucial for working with Physical AI and Humanoid Robotics. This guide will walk you through the essential software installations and configurations required to get started with key robotics frameworks and simulation tools, including ROS 2, Gazebo, Unity, and NVIDIA Isaac.
+
+We emphasize clarity, consistency, and reproducibility to ensure a smooth setup process for all beginners and industry practitioners.
+
+## Core Content: Setting Up Your Environment
+
+This section provides detailed steps for configuring your development environment. We'll cover the installation and initial setup of the primary tools.
+
+### 1. Robot Operating System 2 (ROS 2)
+
+ROS 2 is a flexible framework for writing robot software. It provides a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behaviors.
+
+#### Installation
+
+<Tabs>
+  <TabItem value="ubuntu" label="Ubuntu (Recommended)">
+    To install ROS 2, follow the official documentation for your specific Ubuntu version.
+    ```bash title="ROS 2 Humble Hawksbill Installation (Ubuntu 22.04)" showLineNumbers
+    # Set up your sources
+    sudo apt update && sudo apt install curl -y
+    sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+    # Install ROS 2 packages
+    sudo apt update
+    sudo apt upgrade -y
+    sudo apt install ros-humble-desktop -y # Or ros-humble-base for minimal install
+
+    # Environment setup
+    echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+    source ~/.bashrc
+    ```
+    **Context:** This script adds the ROS 2 apt repository, imports the signing key, updates package lists, and installs the `ros-humble-desktop` package, which includes ROS 2, `rviz2`, and `ros-tutorials`. Finally, it sources the setup file for your current and future shell sessions.
+  </TabItem>
+  <TabItem value="windows" label="Windows (WSL Recommended)">
+    For Windows, it's highly recommended to use Windows Subsystem for Linux (WSL) with Ubuntu. Follow the Ubuntu installation steps within your WSL environment.
+
+    Alternatively, for a native Windows installation, refer to the official ROS 2 Windows documentation: [ROS 2 Windows Installation Guide](https://docs.ros.org/en/humble/Installation/Windows-Install-Binary.html)
+  </TabItem>
+</Tabs>
+
+#### Post-Installation Setup
+
+After installing, verify your ROS 2 environment:
+```bash title="Verify ROS 2 Installation" showLineNumbers
+ros2 daemon --stop # Ensure no old daemons are running
+ros2 run rclpy_examples talker
+ros2 run rclpy_examples listener
+```
+**Context:** These commands run the basic ROS 2 `talker` and `listener` nodes. If successful, you will see messages being published and received, confirming your ROS 2 setup is operational.
+
+### 2. Simulation Environments: Gazebo and Unity
+
+Simulation is critical for robotics development, allowing you to test algorithms in a safe, virtual environment.
+
+#### Gazebo (Classic & Garden)
+
+Gazebo is a powerful 3D robot simulator.
+<Tabs>
+  <TabItem value="gazebo-classic" label="Gazebo Classic (ROS 1 & Older ROS 2)">
+    Gazebo Classic often comes bundled with ROS 1 installations or can be installed separately for specific ROS 2 versions.
+    ```bash title="Install Gazebo Classic" showLineNumbers
+    sudo apt install gazebo
+    sudo apt install ros-humble-gazebo-ros-pkgs # If using ROS 2 Humble
+    ```
+    **Context:** These commands install the Gazebo Classic simulator and the ROS 2 Gazebo bridge packages, allowing ROS 2 nodes to interact with Gazebo.
+  </TabItem>
+  <TabItem value="gazebo-garden" label="Gazebo Garden (Latest ROS 2 Compatible)">
+    Gazebo Garden is the latest version, part of the Ignition Gazebo series, fully compatible with ROS 2.
+    Follow the official documentation: [Ignition Gazebo Installation](https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html) <!-- Placeholder: Replace with actual Ignition Gazebo installation link -->
+  </TabItem>
+</Tabs>
+
+#### Unity 3D
+
+Unity is a popular game development platform that can also be used for high-fidelity robotics simulation.
+
+1.  **Download Unity Hub**: Download and install Unity Hub from the [Unity website](https://unity.com/download).
+2.  **Install Unity Editor**: Use Unity Hub to install a recommended version of the Unity Editor (e.g., Unity 2022.3 LTS).
+3.  **Install `ROS-TCP-Endpoint` and `ROS-TCP-Connector`**: These Unity packages enable communication between Unity simulations and ROS 2 nodes. Refer to the `Unity-Robotics-Hub` GitHub repository for detailed instructions.
+
+### 3. NVIDIA Isaac Sim
+
+NVIDIA Isaac Sim is a scalable robotics simulation application and a synthetic data generation tool built on NVIDIA Omniverse.
+
+1.  **NVIDIA Omniverse Launcher**: Install the Omniverse Launcher.
+2.  **Install Isaac Sim**: From the Omniverse Launcher, install NVIDIA Isaac Sim.
+3.  **Configure ROS 2 Bridge**: Isaac Sim includes built-in ROS 2 bridges. Follow the Isaac Sim documentation to enable and configure these bridges to communicate with your ROS 2 environment.
+
+## Troubleshooting Common Issues
+
+*   **Missing `source /opt/ros/humble/setup.bash`**: Ensure this line is in your `~/.bashrc` (or equivalent shell config) and you've sourced it after installation. Without it, ROS 2 commands will not be found.
+*   **Permissions Errors**: When installing with `apt`, ensure you use `sudo`. For other tools, check if you need to set execute permissions (`chmod +x script.sh`) or run as administrator on Windows.
+*   **Network Configuration**: If ROS 2 nodes cannot communicate, check your firewall settings and ensure that `ROS_DOMAIN_ID` is consistent across all your ROS 2 terminals.
+*   **Dependency Conflicts**: Occasionally, installing multiple robotics tools can lead to library conflicts. Use a virtual environment or Docker containers for isolated development where possible.
+
+<Admonition type="caution" title="Security Best Practices">
+  *   Always download software from official sources to avoid malware.
+  *   Do not run scripts from untrusted sources without reviewing their content.
+  *   Avoid hardcoding sensitive information directly into configuration files; use environment variables or secure configuration management tools.
+</Admonition>
+
+## Key Takeaways
+
+*   A well-configured environment is foundational for effective robotics development.
+*   ROS 2 is a core framework, with installation varying slightly based on the operating system.
+*   Simulation tools like Gazebo, Unity, and NVIDIA Isaac Sim provide virtual testing grounds for your robotics algorithms.
+*   Common issues often involve environment sourcing, permissions, or network settings, which can be resolved by carefully following documentation.
+
+## Summary
+
+This chapter provided a comprehensive guide to setting up your environment for Physical AI and Humanoid Robotics, covering ROS 2, Gazebo, Unity, and NVIDIA Isaac Sim. By following these instructions, you should have a functional development environment ready for further exploration into robotics concepts and hands-on exercises. Remember to consult official documentation for the most up-to-date and specific installation instructions.
+
+## References
+
+*   [ROS 2 Documentation](https://docs.ros.org/)
+*   [Gazebo Documentation](https://classic.gazebosim.org/docs/)
+*   [Unity Robotics Hub](https://github.com/Unity-Technologies/Unity-Robotics-Hub)
+*   [NVIDIA Isaac Sim Documentation](https://developer.nvidia.com/isaac-sim)

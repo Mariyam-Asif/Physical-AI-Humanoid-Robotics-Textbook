@@ -50,6 +50,8 @@ The project follows a structured layout designed for clear organization and easy
 ├── docs/                        # All chapter MDX files (Module/Chapter hierarchy)
 │   ├── module-1/
 │   │   ├── chapter-1.mdx
+│   │   ├── chapter-2.mdx
+│   │   ├── chapter-3.mdx
 │   │   └── _category_.json # Docusaurus sidebar configuration
 │   ├── module-2/
 │   │   └── chapter-N.mdx

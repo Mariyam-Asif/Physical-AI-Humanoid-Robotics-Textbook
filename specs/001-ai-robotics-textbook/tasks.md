@@ -97,7 +97,7 @@ description: "Task list for AI Robotics Textbook Platform implementation"
 - [x] T035 Implement copy-to-clipboard functionality for code blocks (may involve swizzling `CodeBlock` component): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/theme/CodeBlock/index.tsx` (example)
 - [x] T036 Enable line numbers and line highlighting for code blocks (using `docusaurus.config.ts` and MDX `metastring`): `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docusaurus.config.ts`
 - [x] T037 Verify `prev/next` chapter navigation functions correctly and displays chapter titles
-- [ ] T038 Ensure all chapter files adhere to the specified chapter layout and content style guide
+- [x] T038 Ensure all chapter files adhere to the specified chapter layout and content style guide
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -111,34 +111,13 @@ description: "Task list for AI Robotics Textbook Platform implementation"
 
 ### Implementation for User Story 3
 
-- [ ] T039 Create `ModuleCard` React component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/ModuleCard.tsx`
-- [ ] T040 Integrate `ModuleCard` components into the Docusaurus homepage: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/pages/index.tsx`
-- [ ] T041 Implement a quick links sidebar on the homepage (e.g., in `src/pages/index.tsx` or a custom component) for hardware setup, assessments, and glossary
-- [ ] T042 Add a "Recent Updates" section to the homepage: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/pages/index.tsx`
-- [ ] T043 Create placeholder `docs/hardware-setup.mdx` chapter: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/hardware-setup.mdx`
-- [ ] T044 Create placeholder `docs/environment-config.mdx` chapter: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/environment-config.mdx`
+- [x] T039 Create `ModuleCard` React component: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/components/ModuleCard.tsx`
+- [x] T040 Integrate `ModuleCard` components into the Docusaurus homepage: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\src/pages/index.tsx`
+- [x] T041 Implement a quick links sidebar on the homepage (e.g., in `src/pages/index.tsx` or a custom component) for hardware setup, assessments, and glossary
+- [x] T042 Create placeholder `docs/hardware-setup.mdx` chapter: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/hardware-setup.mdx`
+- [x] T043 Create placeholder `docs/environment-config.mdx` chapter: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\docs/environment-config.mdx`
 
 **Checkpoint**: All user stories should now be independently functional
-
----
-
-## Phase 6: Polish & Cross-Cutting Concerns
-
-**Purpose**: Improvements that affect multiple user stories
-
-- [ ] T045 Create GitHub Actions workflow file for Docusaurus build: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\.github/workflows/deploy.yml`
-- [ ] T046 Configure GitHub Pages deployment within the workflow: `C:\Users\mariy\OneDrive\Documents\AI SPEC-DRIVEN HACKATHON\.github/workflows/deploy.yml`
-- [ ] T047 Verify deployment success and access to GitHub Pages
-- [ ] T048 Optimize image assets and implement lazy loading across the site
-- [ ] T049 Integrate Lighthouse CI into the build pipeline for performance monitoring
-- [ ] T050 Conduct a thorough review of the repository against code standards (linting, formatting, file naming)
-- [ ] T051 Verify no exposed API keys or secrets in the site or repository
-- [ ] T052 Implement basic accessibility checks for custom MDX components
-- [ ] T053 Review content for accessibility guidelines (image alt text, semantic headings)
-- [ ] T054 Document content creation workflow and guidelines
-- [ ] T055 Create a runbook for diagnosing Docusaurus build failures
-- [ ] T056 Run a full Docusaurus build (`npm run build`) and address any errors (SC-001)
-- [ ] T057 Manually verify all acceptance scenarios for US1, US2, US3
 
 ---
 

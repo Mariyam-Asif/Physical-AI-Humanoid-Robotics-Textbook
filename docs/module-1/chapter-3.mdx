@@ -1,0 +1,99 @@
+---
+id: m1c3
+title: ROS 2 Topics & Message Passing
+description: Learn how publishers and subscribers work in ROS 2.
+tags: ['ROS 2', 'topics', 'messages']
+sidebar_label: Chapter 3 Topics & Message Passing
+estimated_time: 1 hour
+week: 4
+module: Module 1 (ROS 2) (Weeks 3–5)
+prerequisites: ['m1c1', 'm1c2']
+learning_objectives:
+  - Create publishers and subscribers.
+  - Understand message types.
+  - Build real-time communication between nodes.
+assessment_type: Lab
+difficulty_level: Beginner
+capstone_component: false
+slug: /module-1/topics-and-message-passing
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Callout from '@site/src/components/mdx-components/Callout';
+import Exercise from '@site/src/components/mdx-components/Exercise';
+import KeyTakeaways from '@site/src/components/mdx-components/KeyTakeaways';
+
+# Topics & Message Passing
+
+<Callout type="learning-objectives">
+**Learning Objectives**
+- Create publishers and subscribers.
+- Understand message types.
+- Build real-time communication between nodes.
+</Callout>
+
+**Prerequisites:** Chapters 1 & 2
+
+## Introduction
+
+Topics allow ROS 2 nodes to exchange information continuously. A publisher sends data, while a subscriber receives it. Topics are ideal for sensor data streams and real-time robot behavior.
+
+## Core Content: Topics
+
+### Publishers and Subscribers
+
+- A **publisher** sends messages on a topic.
+- A **subscriber** listens for those messages.
+
+### Example: Publisher
+
+<Tabs>
+<TabItem value="python" label="Python">
+
+```python showLineNumbers title="publisher.py"
+from std_msgs.msg import String
+from rclpy.node import Node
+import rclpy
+
+class PublisherNode(Node):
+    def __init__(self):
+        super().__init__('publisher_node')
+        self.publisher = self.create_publisher(String, "status", 10)
+        self.timer = self.create_timer(1.0, self.publish_msg)
+
+    def publish_msg(self):
+        msg = String()
+        msg.data = "Robot is running"
+        self.publisher.publish(msg)
+        self.get_logger().info("Message sent")
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = PublisherNode()
+    rclpy.spin(node)
+    rclpy.shutdown()
+
+if __name__ == "__main__":
+    main()
+```   
+    </TabItem>
+</Tabs>
+
+## Hands-On Exercise
+<Exercise id="topics-message" title="Build a Topic Pair" difficulty="easy" estimated_time="30 min">
+<p>Create a publisher and subscriber pair that exchange temperature data.</p>
+</Exercise>
+
+<KeyTakeaways>
+- Topics support real-time data exchange.
+- Publishers and subscribers must use the same message type.
+</KeyTakeaways>
+
+## Summary
+
+This chapter taught you how message passing works, enabling distributed robot functionality.
+
+## References
+
+ROS 2 Topic Documentation — [https://docs.ros.org/en/foxy/]

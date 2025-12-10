@@ -53,7 +53,7 @@
   "start": "docusaurus start",
   "build": "docusaurus build",
   "swizzle": "docusaurus swizzle",
-  "deploy": "docusaurus deploy",
+  "deploy": "npm run build && npx gh-pages -d build",
   "serve": "docusaurus serve"
 },
   "engines": {
