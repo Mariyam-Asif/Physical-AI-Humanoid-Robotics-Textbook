@@ -42,7 +42,7 @@
 
 .week {
   font-weight: bold;
-  color: #ccc;
+  color: var(--ifm-font-color-base);
   margin-bottom: 10px;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .description {
-  color: #ccc;
+  color: var(--ifm-font-color-base);
   margin-bottom: 10px;
   font-size: 0.95rem;
 }

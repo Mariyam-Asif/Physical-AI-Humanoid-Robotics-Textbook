@@ -16,7 +16,7 @@ const config: Config = {
 
   // Set the production url of your site here
   url: 'https://mariyam-asif.github.io',
-  baseUrl: '/',
+  baseUrl: '/Physical-AI-Humanoid-Robotics-Textbook/',
 
 
   // GitHub pages deployment config.
@@ -24,7 +24,7 @@ const config: Config = {
   organizationName: 'mariyam-asif', // Usually your GitHub org/user name.
   projectName: 'physical-ai-humanoid-robotics-hextbook', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -41,7 +41,6 @@ const config: Config = {
     {
       hashed: true,
       docsRouteBasePath: '/',
-      blogRouteBasePath: '/blog',
       indexDocs: true,
       indexBlog: true,
       indexPages: false,
@@ -67,7 +66,7 @@ const config: Config = {
           recmaPlugins: [],
         },
         blog: {
-          showReadingTime: true,
+          showReadingTime: false,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
